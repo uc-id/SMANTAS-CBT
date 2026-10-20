@@ -19,7 +19,7 @@
 
   <!-- OVERLAY LOADING GLOBAL -->
   <div id="loading-overlay" class="hidden fixed inset-0 bg-black/80 z-[999999] flex flex-col items-center justify-center text-white backdrop-blur-sm">
-      <div class="animate-spin rounded-full h-14 w-14 border-t-4 border-b-4 border-blue-500 mb-4"></div>
+      <div class="animate-spin rounded-full h-14 w-14 border-t-4 border-b-4 border-emerald-500 mb-4"></div>
       <h3 id="loading-text" class="font-bold text-sm sm:text-base tracking-wide text-center px-4">Menghubungkan ke GitHub Gist...</h3>
   </div>
 
@@ -27,20 +27,27 @@
     
     <!-- HALAMAN LOGIN -->
     <div id="view-login" class="flex items-center justify-center min-h-screen p-4">
-      <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl w-full max-w-sm border-t-4 border-blue-600 relative">
+      <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl w-full max-w-sm border-t-4 border-emerald-600 relative">
         
-        <!-- LOGO BASE64 UTUH -->
-        <div class="flex justify-center mb-2">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABYAAAAMACAYAAACdMcPMAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAvT/SURBVHja7P15vBxVnT/+v8451cu9NpcrBPIIJAaBqACoIAqL3EAKFAaAoaAVKEFESAAkEFC1gqI1gZAKVKYG1lYCAoICChK0AKKAFvYCBAkaCoJQQkEpA6CqgAK0CCAqKAgOIguhHR2f052zORz/kw1FpKaL2vG5v2+e09d1vH/Vw/X7d3rveE0P30k/1f4vRrx5o4sYkAAAAAElFTkSuQmCC" alt="by.UC Digital Study" class="h-14 w-auto object-contain my-0">
+        <!-- LOGO PERBAIKAN (WARNA HIJAU) -->
+        <div class="flex justify-center mb-3 id-logo-container">
+          <svg class="h-12 w-auto my-0" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="60" rx="12" fill="#059669"/>
+            <path d="M25 18L38 30L25 42" stroke="#A7F3D0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M42 42H52" stroke="#A7F3D0" stroke-width="4" stroke-linecap="round"/>
+            <text x="62" y="38" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="20" letter-spacing="1">SMANTAS</text>
+            <text x="160" y="24" fill="#FACC15" font-family="sans-serif" font-weight="800" font-size="10">CBT</text>
+            <text x="160" y="38" fill="#D1FAE5" font-family="sans-serif" font-weight="600" font-size="8">by.UC</text>
+          </svg>
         </div>
 
-        <h2 class="text-2xl font-black text-center mb-0.5 text-blue-700 tracking-tight">SMANTAS CBT</h2>
+        <h2 class="text-2xl font-black text-center mb-0.5 text-emerald-700 tracking-tight">SMANTAS CBT</h2>
         <div class="text-xs text-center text-gray-500 font-bold mb-6 leading-relaxed">
           SMA Negeri 1 Tanjungsari<br>Kabupaten Bogor
         </div>
         
         <div class="flex justify-center mb-6 space-x-1 bg-gray-100 p-1.5 rounded-xl border">
-          <button onclick="setRole('SISWA')" id="btn-Siswa" class="w-1/2 py-2.5 bg-blue-600 text-white rounded-lg font-bold text-xs sm:text-sm shadow-sm transition">SISWA</button>
+          <button onclick="setRole('SISWA')" id="btn-Siswa" class="w-1/2 py-2.5 bg-emerald-600 text-white rounded-lg font-bold text-xs sm:text-sm shadow-sm transition">SISWA</button>
           <button onclick="setRole('ADMIN')" id="btn-Admin" class="w-1/2 py-2.5 text-gray-600 rounded-lg font-bold text-xs sm:text-sm transition">ADMIN</button>
         </div>
 
@@ -48,13 +55,13 @@
         <div class="space-y-4">
           <div>
             <label class="text-xs text-gray-600 font-bold mb-1.5 block">Username</label>
-            <input type="text" id="username" placeholder="Masukkan Username" class="w-full p-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm bg-gray-50 focus:bg-white transition">
+            <input type="text" id="username" placeholder="Masukkan Username" class="w-full p-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm bg-gray-50 focus:bg-white transition">
           </div>
           <div>
             <label class="text-xs text-gray-600 font-bold mb-1.5 block">Password</label>
-            <input type="password" id="password" placeholder="Masukkan Password" class="w-full p-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm bg-gray-50 focus:bg-white transition">
+            <input type="password" id="password" placeholder="Masukkan Password" class="w-full p-3.5 border rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm bg-gray-50 focus:bg-white transition">
           </div>
-          <button onclick="prosesLogin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg active:scale-95 transition text-sm">LOGIN MASUK</button>
+          <button onclick="prosesLogin()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-lg active:scale-95 transition text-sm">LOGIN MASUK</button>
         </div>
       </div>
     </div>
@@ -63,13 +70,20 @@
     <div id="view-admin" class="hidden p-3 sm:p-6 max-w-7xl mx-auto w-full">
       <div class="flex flex-col md:flex-row justify-between items-center bg-white p-4 rounded-xl shadow mb-4 gap-3">
         <div class="flex items-center space-x-3">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABYAAAAMACAYAAACdMcPMAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAvT/SURBVHja7P15vBxVnT/+v8451cu9NpcrBPIIJAaBqACoIAqL3EAKFAaAoaAVKEFESAAkEFC1gqI1gZAKVKYG1lYCAoICChK0AKKAFvYCBAkaCoJQQkEpA6CqgAK0CCAqKAgOIguhHR2f052zORz/kw1FpKaL2vG5v2+e09d1vH/Vw/X7d3rveE0P30k/1f4vRrx5o4sYkAAAAAElFTkSuQmCC" alt="by.UC" class="h-10 w-auto object-contain my-0 shrink-0">
-          <h1 class="text-base sm:text-xl font-bold text-blue-700 text-center md:text-left">Admin Dashboard - SMANTAS CBT</h1>
+          <svg class="h-9 w-auto my-0 shrink-0" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="60" rx="12" fill="#059669"/>
+            <path d="M25 18L38 30L25 42" stroke="#A7F3D0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M42 42H52" stroke="#A7F3D0" stroke-width="4" stroke-linecap="round"/>
+            <text x="62" y="38" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="20" letter-spacing="1">SMANTAS</text>
+            <text x="160" y="24" fill="#FACC15" font-family="sans-serif" font-weight="800" font-size="10">CBT</text>
+            <text x="160" y="38" fill="#D1FAE5" font-family="sans-serif" font-weight="600" font-size="8">by.UC</text>
+          </svg>
+          <h1 class="text-base sm:text-xl font-bold text-emerald-700 text-center md:text-left">Admin Dashboard - SMANTAS CBT</h1>
         </div>
         <div class="flex flex-wrap gap-1.5 justify-center w-full md:w-auto">
-          <button onclick="syncGistData(true)" class="flex-1 md:flex-initial text-[10px] bg-cyan-600 hover:bg-cyan-700 text-white px-2.5 py-1.5 rounded font-bold">Sinkron Gist</button>
+          <button onclick="syncGistData(true)" class="flex-1 md:flex-initial text-[10px] bg-teal-600 hover:bg-teal-700 text-white px-2.5 py-1.5 rounded font-bold">Sinkron Gist</button>
           <button onclick="downloadTemplateSiswa()" class="flex-1 md:flex-initial text-[10px] bg-emerald-600 hover:bg-emerald-700 text-white px-2.5 py-1.5 rounded font-bold">F-Siswa</button>
-          <button onclick="downloadTemplateSoal()" class="flex-1 md:flex-initial text-[10px] bg-blue-600 hover:bg-blue-700 text-white px-2.5 py-1.5 rounded font-bold">F-Soal</button>
+          <button onclick="downloadTemplateSoal()" class="flex-1 md:flex-initial text-[10px] bg-green-600 hover:bg-green-700 text-white px-2.5 py-1.5 rounded font-bold">F-Soal</button>
           <button onclick="gantiPassword()" class="flex-1 md:flex-initial text-[10px] bg-amber-500 hover:bg-amber-600 text-white px-2.5 py-1.5 rounded font-bold">Pass Admin</button>
           <button onclick="resetAllDatabase()" class="flex-1 md:flex-initial text-[10px] bg-rose-700 hover:bg-rose-800 text-white px-2.5 py-1.5 rounded font-bold">Reset DB</button>
           <button onclick="logout()" class="flex-1 md:flex-initial text-[10px] bg-gray-600 hover:bg-gray-700 text-white px-2.5 py-1.5 rounded font-bold">Logout</button>
@@ -80,7 +94,7 @@
       <div class="mb-4 border-b border-gray-200 overflow-x-auto no-scrollbar">
         <ul class="flex whitespace-nowrap text-xs sm:text-sm font-medium text-center" id="admin-tabs">
           <li class="mr-2">
-            <button class="inline-block p-3 sm:p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg tab-btn font-bold" onclick="switchAdminTab('tab-pengaturan', this)">Pengaturan & Siswa</button>
+            <button class="inline-block p-3 sm:p-4 text-emerald-600 border-b-2 border-emerald-600 rounded-t-lg tab-btn font-bold" onclick="switchAdminTab('tab-pengaturan', this)">Pengaturan & Siswa</button>
           </li>
           <li class="mr-2">
             <button class="inline-block p-3 sm:p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 tab-btn font-bold" onclick="switchAdminTab('tab-ujian', this)">Manajemen Ujian</button>
@@ -103,7 +117,7 @@
               <label class="text-xs font-bold text-gray-600 block mb-1">Daftar Mata Pelajaran</label>
               <div class="flex">
                 <input type="text" id="input-mapel" placeholder="Tambah Mapel..." class="w-full p-2.5 text-sm border rounded-l-lg focus:outline-none">
-                <button onclick="tambahItem('mapel')" class="bg-blue-600 text-white px-4 rounded-r-lg font-bold">+</button>
+                <button onclick="tambahItem('mapel')" class="bg-emerald-600 text-white px-4 rounded-r-lg font-bold">+</button>
               </div>
               <ul id="list-mapel-ui" class="mt-2 border rounded-lg h-36 overflow-y-auto p-2 bg-gray-50 text-sm divide-y"></ul>
             </div>
@@ -111,14 +125,14 @@
               <label class="text-xs font-bold text-gray-600 block mb-1">Daftar Kelas</label>
               <div class="flex">
                 <input type="text" id="input-kelas" placeholder="Tambah Kelas..." class="w-full p-2.5 text-sm border rounded-l-lg focus:outline-none">
-                <button onclick="tambahItem('kelas')" class="bg-blue-600 text-white px-4 rounded-r-lg font-bold">+</button>
+                <button onclick="tambahItem('kelas')" class="bg-emerald-600 text-white px-4 rounded-r-lg font-bold">+</button>
               </div>
               <ul id="list-kelas-ui" class="mt-2 border rounded-lg h-36 overflow-y-auto p-2 bg-gray-50 text-sm divide-y"></ul>
             </div>
           </div>
         </div>
 
-        <div class="bg-white p-4 sm:p-6 rounded-xl shadow border-l-4 border-indigo-500">
+        <div class="bg-white p-4 sm:p-6 rounded-xl shadow border-l-4 border-teal-500">
           <h3 class="font-bold text-base mb-4 text-gray-700">Tambah Siswa Manual</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             <input type="text" id="manual-nama" placeholder="Nama Lengkap" class="p-2.5 border rounded-lg text-sm w-full">
@@ -128,14 +142,24 @@
             <input type="text" id="manual-user" placeholder="Username Login" class="p-2.5 border rounded-lg text-sm w-full">
             <input type="text" id="manual-pass" placeholder="Password Login" class="p-2.5 border rounded-lg text-sm w-full">
           </div>
-          <button onclick="tambahSiswaSatu()" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-3 rounded-xl font-bold text-sm w-full md:w-auto">Simpan Data Siswa</button>
+          <button onclick="tambahSiswaSatu()" class="mt-4 bg-teal-600 hover:bg-teal-700 text-white px-4 py-3 rounded-xl font-bold text-sm w-full md:w-auto">Simpan Data Siswa</button>
         </div>
 
+        <!-- KELOLA & CARI SISWA & HAPUS SEMUA SISWA -->
         <div class="bg-white p-4 sm:p-6 rounded-xl shadow border-l-4 border-rose-500">
-          <div class="flex justify-between items-center mb-3">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 gap-2">
             <h3 class="font-bold text-base text-gray-700">Kelola / Hapus Siswa</h3>
-            <button onclick="loadTabelSiswa()" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold px-3 py-1.5 rounded-lg">Refresh</button>
+            <div class="flex space-x-2 w-full sm:w-auto">
+              <button onclick="hapusSemuaSiswa()" class="text-xs bg-rose-600 hover:bg-rose-700 text-white font-bold px-3 py-2 rounded-lg flex-1 sm:flex-initial">Hapus Semua Siswa</button>
+              <button onclick="loadTabelSiswa()" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold px-3 py-2 rounded-lg flex-1 sm:flex-initial">Refresh</button>
+            </div>
           </div>
+
+          <!-- INPUT CARI SISWA BERDASARKAN NAMA -->
+          <div class="mb-3">
+            <input type="text" id="cari-nama-siswa" onkeyup="filterTabelSiswa()" placeholder="🔍 Cari siswa berdasarkan nama..." class="w-full p-2.5 border rounded-lg text-xs sm:text-sm bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          </div>
+
           <div class="overflow-x-auto border rounded-lg max-h-60 overflow-y-auto">
             <table class="w-full text-left border-collapse text-xs sm:text-sm" id="tabel-kelola-siswa">
               <thead class="bg-gray-100 font-bold text-gray-700 sticky top-0">
@@ -163,16 +187,16 @@
       <!-- TAB 2: MANAJEMEN UJIAN -->
       <div id="tab-ujian" class="admin-tab-content hidden space-y-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <div class="lg:col-span-5 bg-white p-4 sm:p-6 rounded-xl shadow border-l-4 border-blue-500">
+          <div class="lg:col-span-5 bg-white p-4 sm:p-6 rounded-xl shadow border-l-4 border-emerald-500">
             <h3 class="font-bold text-base mb-3 text-gray-700">Buat Ujian & Unggah Soal</h3>
             <div class="space-y-3">
               <div>
                 <label class="text-xs font-bold text-gray-600 mb-1 block">Judul Ujian:</label>
-                <input type="text" id="tes-judul" placeholder="Judul Tes (cth: PAS Ganjil)" class="w-full p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                <input type="text" id="tes-judul" placeholder="Judul Tes (cth: PAS Ganjil)" class="w-full p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
               </div>
               <div>
                 <label class="text-xs font-bold text-gray-600 mb-1 block">Mata Pelajaran:</label>
-                <select id="tes-mapel" class="w-full p-2.5 border rounded-lg text-sm bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                <select id="tes-mapel" class="w-full p-2.5 border rounded-lg text-sm bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                   <option value="">- Mata Pelajaran -</option>
                 </select>
               </div>
@@ -182,17 +206,17 @@
               </div>
               <div>
                 <label class="text-xs font-bold text-gray-600 mb-1 block">Durasi Ujian (Menit):</label>
-                <input type="number" id="tes-durasi" value="60" placeholder="Durasi (Menit)" class="w-full p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                <input type="number" id="tes-durasi" value="60" placeholder="Durasi (Menit)" class="w-full p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
               </div>
               <div>
                 <label class="text-xs font-bold text-gray-600 block mb-1">Unggah Dokumen Soal (Format Word / Excel / HTML):</label>
                 <input type="file" id="fileExcelSoal" class="w-full p-2 border rounded-lg text-xs sm:text-sm bg-gray-50" accept=".xlsx, .xls, .doc, .docx, .html, .htm">
               </div>
               <label class="flex items-center space-x-2 text-sm pt-1 cursor-pointer">
-                <input type="checkbox" id="tes-acak" value="YA" class="w-4 h-4 text-blue-600 rounded">
+                <input type="checkbox" id="tes-acak" value="YA" class="w-4 h-4 text-emerald-600 rounded">
                 <span class="font-medium text-gray-700">Acak Urutan Soal Siswa</span>
               </label>
-              <button onclick="buatUjianTerpadu()" class="mt-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-xl w-full font-bold text-sm shadow transition">Proses Ujian & Soal</button>
+              <button onclick="buatUjianTerpadu()" class="mt-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-xl w-full font-bold text-sm shadow transition">Proses Ujian & Soal</button>
             </div>
           </div>
 
@@ -222,13 +246,13 @@
 
       <!-- TAB 3: DAFTAR SOAL -->
       <div id="tab-soal" class="admin-tab-content hidden space-y-4">
-        <div class="bg-white p-3 sm:p-5 rounded-xl shadow border-l-4 border-blue-600">
+        <div class="bg-white p-3 sm:p-5 rounded-xl shadow border-l-4 border-emerald-600">
           <h3 class="font-bold text-sm sm:text-base text-gray-800 mb-0.5">Kelola Soal</h3>
           <div class="flex flex-col sm:flex-row gap-2 mb-4 bg-gray-50 p-2.5 rounded-xl border">
             <select id="select-soal-idtes" class="p-2 border rounded-lg text-xs sm:text-sm bg-white flex-1">
               <option value="">- Pilih ID Ujian -</option>
             </select>
-            <button onclick="loadDaftarSoalAdmin()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-bold text-xs sm:text-sm shadow transition shrink-0">Tampilkan Soal</button>
+            <button onclick="loadDaftarSoalAdmin()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-bold text-xs sm:text-sm shadow transition shrink-0">Tampilkan Soal</button>
           </div>
           <div id="container-daftar-soal-admin" class="space-y-3">
              <p class="text-xs text-gray-400 italic">Silakan pilih Ujian di atas lalu klik "Tampilkan Soal".</p>
@@ -241,7 +265,7 @@
         <div class="bg-white p-4 sm:p-6 rounded-xl shadow">
           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
              <h3 class="font-bold text-base text-gray-700">Monitoring & Hasil Ujian Siswa</h3>
-             <button onclick="loadLiveMonitor()" class="text-xs bg-blue-100 text-blue-700 font-bold px-3 py-2 rounded-lg hover:bg-blue-200 w-full sm:w-auto">Refresh Data</button>
+             <button onclick="loadLiveMonitor()" class="text-xs bg-emerald-100 text-emerald-700 font-bold px-3 py-2 rounded-lg hover:bg-emerald-200 w-full sm:w-auto">Refresh Data</button>
           </div>
 
           <div class="p-4 bg-purple-50 border border-purple-200 rounded-xl mb-4 flex flex-col sm:flex-row gap-3 items-end">
@@ -274,12 +298,19 @@
 
     <!-- HALAMAN SISWA -->
     <div id="view-siswa" class="hidden min-h-screen bg-gray-50 flex-col w-full">
-      <div id="siswa-header" class="bg-blue-700 text-white px-4 py-3 shadow-md flex justify-between items-center sticky top-0 z-20">
+      <div id="siswa-header" class="bg-emerald-700 text-white px-4 py-3 shadow-md flex justify-between items-center sticky top-0 z-20">
          <div class="flex items-center space-x-3">
-           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABYAAAAMACAYAAACdMcPMAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAvT/SURBVHja7P15vBxVnT/+v8451cu9NpcrBPIIJAaBqACoIAqL3EAKFAaAoaAVKEFESAAkEFC1gqI1gZAKVKYG1lYCAoICChK0AKKAFvYCBAkaCoJQQkEpA6CqgAK0CCAqKAgOIguhHR2f052zORz/kw1FpKaL2vG5v2+e09d1vH/Vw/X7d3rveE0P30k/1f4vRrx5o4sYkAAAAAElFTkSuQmCC" alt="by.UC" class="h-8 w-auto object-contain bg-white/10 p-1 rounded-lg my-0">
+           <svg class="h-8 w-auto bg-white/10 p-1 rounded-lg my-0" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <rect width="200" height="60" rx="12" fill="#059669"/>
+             <path d="M25 18L38 30L25 42" stroke="#A7F3D0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+             <path d="M42 42H52" stroke="#A7F3D0" stroke-width="4" stroke-linecap="round"/>
+             <text x="62" y="38" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="20" letter-spacing="1">SMANTAS</text>
+             <text x="160" y="24" fill="#FACC15" font-family="sans-serif" font-weight="800" font-size="10">CBT</text>
+             <text x="160" y="38" fill="#D1FAE5" font-family="sans-serif" font-weight="600" font-size="8">by.UC</text>
+           </svg>
            <div>
              <h2 class="font-bold text-sm sm:text-base leading-tight" id="profil-nama">Nama Siswa</h2>
-             <p class="text-xs text-blue-200" id="profil-kelas">Kelas</p>
+             <p class="text-xs text-emerald-200" id="profil-kelas">Kelas</p>
            </div>
          </div>
          <button onclick="logout()" class="bg-rose-500 hover:bg-rose-600 px-3 py-1.5 rounded-lg text-xs font-bold">Logout</button>
@@ -302,10 +333,17 @@
       <div id="engine-ujian" class="hidden flex-col h-screen fixed inset-0 bg-gray-100 z-50 no-select">
          <div class="bg-white px-3 sm:px-4 py-2.5 shadow-sm border-b flex justify-between items-center shrink-0">
             <div class="pr-2 overflow-hidden flex items-center space-x-2">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABYAAAAMACAYAAACdMcPMAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAvT/SURBVHja7P15vBxVnT/+v8451cu9NpcrBPIIJAaBqACoIAqL3EAKFAaAoaAVKEFESAAkEFC1gqI1gZAKVKYG1lYCAoICChK0AKKAFvYCBAkaCoJQQkEpA6CqgAK0CCAqKAgOIguhHR2f052zORz/kw1FpKaL2vG5v2+e09d1vH/Vw/X7d3rveE0P30k/1f4vRrx5o4sYkAAAAAElFTkSuQmCC" alt="by.UC" class="h-7 w-auto object-contain my-0 shrink-0">
+              <svg class="h-7 w-auto my-0 shrink-0" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="60" rx="12" fill="#059669"/>
+                <path d="M25 18L38 30L25 42" stroke="#A7F3D0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M42 42H52" stroke="#A7F3D0" stroke-width="4" stroke-linecap="round"/>
+                <text x="62" y="38" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="20" letter-spacing="1">SMANTAS</text>
+                <text x="160" y="24" fill="#FACC15" font-family="sans-serif" font-weight="800" font-size="10">CBT</text>
+                <text x="160" y="38" fill="#D1FAE5" font-family="sans-serif" font-weight="600" font-size="8">by.UC</text>
+              </svg>
               <div class="truncate">
                 <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Mata Pelajaran</span>
-                <h3 class="font-extrabold text-xs sm:text-base text-blue-800 truncate" id="uji-mapel">Mata Pelajaran</h3>
+                <h3 class="font-extrabold text-xs sm:text-base text-emerald-800 truncate" id="uji-mapel">Mata Pelajaran</h3>
               </div>
             </div>
             <div class="flex items-center space-x-2 shrink-0">
@@ -316,10 +354,10 @@
 
          <div class="bg-white px-3 sm:px-4 py-2 border-b shadow-sm flex justify-between items-center gap-2 shrink-0">
             <button onclick="soalSebelumnya()" id="btn-prev" class="flex-1 bg-gray-600 text-white py-2.5 rounded-xl font-bold text-xs sm:text-sm">SEBELUMNYA</button>
-            <button onclick="toggleModalDaftarSoal()" class="px-3 py-2.5 bg-blue-50 text-blue-700 rounded-xl font-bold text-xs border shrink-0">
+            <button onclick="toggleModalDaftarSoal()" class="px-3 py-2.5 bg-emerald-50 text-emerald-700 rounded-xl font-bold text-xs border shrink-0">
                <span id="label-nomor-posisi">1/1</span>
             </button>
-            <button onclick="soalBerikutnya()" id="btn-next" class="flex-1 bg-blue-600 text-white py-2.5 rounded-xl font-bold text-xs sm:text-sm">SELANJUTNYA</button>
+            <button onclick="soalBerikutnya()" id="btn-next" class="flex-1 bg-emerald-600 text-white py-2.5 rounded-xl font-bold text-xs sm:text-sm">SELANJUTNYA</button>
             <button onclick="submitUjian('SELESAI')" id="btn-finish" class="hidden flex-1 bg-emerald-600 text-white py-2.5 rounded-xl font-bold text-xs sm:text-sm">SELESAI UJIAN</button>
          </div>
 
@@ -340,10 +378,17 @@
       <!-- HASIL UJIAN -->
       <div id="view-hasil" class="hidden flex items-center justify-center min-h-screen p-4">
          <div class="bg-white p-6 sm:p-10 rounded-2xl shadow-xl max-w-md w-full border-t-8 border-emerald-500 text-center">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABYAAAAMACAYAAACdMcPMAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAvT/SURBVHja7P15vBxVnT/+v8451cu9NpcrBPIIJAaBqACoIAqL3EAKFAaAoaAVKEFESAAkEFC1gqI1gZAKVKYG1lYCAoICChK0AKKAFvYCBAkaCoJQQkEpA6CqgAK0CCAqKAgOIguhHR2f052zORz/kw1FpKaL2vG5v2+e09d1vH/Vw/X7d3rveE0P30k/1f4vRrx5o4sYkAAAAAElFTkSuQmCC" alt="by.UC" class="h-12 w-auto object-contain mx-auto mb-2">
+            <svg class="h-12 w-auto mx-auto mb-2" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="60" rx="12" fill="#059669"/>
+              <path d="M25 18L38 30L25 42" stroke="#A7F3D0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M42 42H52" stroke="#A7F3D0" stroke-width="4" stroke-linecap="round"/>
+              <text x="62" y="38" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="20" letter-spacing="1">SMANTAS</text>
+              <text x="160" y="24" fill="#FACC15" font-family="sans-serif" font-weight="800" font-size="10">CBT</text>
+              <text x="160" y="38" fill="#D1FAE5" font-family="sans-serif" font-weight="600" font-size="8">by.UC</text>
+            </svg>
             <h2 class="text-xl sm:text-2xl font-bold mb-2" id="hasil-status">UJIAN SELESAI</h2>
             <p class="text-xs sm:text-sm text-gray-600 mb-6" id="hasil-msg">Terima kasih telah mengikuti ujian.</p>
-            <div class="text-5xl font-black text-blue-600 mb-6" id="hasil-nilai">0</div>
+            <div class="text-5xl font-black text-emerald-600 mb-6" id="hasil-nilai">0</div>
             <button onclick="logout()" class="w-full bg-gray-900 text-white py-3.5 rounded-xl text-sm font-bold shadow-lg">Kembali ke Dashboard</button>
          </div>
       </div>
@@ -355,7 +400,7 @@
     // =========================================================
     // MODUL GITHUB GIST & STANDALONE ENGINE (INTEGRATED)
     // =========================================================
-    const GIST_ID = 'd991a8acc5e0710d8ea50be29f4e4898';
+    const GIST_ID = '68b435cb54de1e6b63607b845399a9b3';
     const _t1 = 'ghp_LqATIFrYd3dyb0ODfP2hT28';
     const _t2 = 'UMtIzWt17JOgY';
     const GITHUB_TOKEN = _t1 + _t2;
@@ -565,7 +610,7 @@
           <tr style="background-color: #f2f4f8; font-weight: bold;">
             <td style="padding: 8px; border: 1px solid #ccc; text-align: center; width: 10%;">${i}</td>
             <td style="padding: 8px; border: 1px solid #ccc; width: 75%;">${isEx ? "Contoh Pertanyaan: Berapakah hasil dari 2 + 2? [img]https://via.placeholder.com/150[/img]" : ""}</td>
-            <td style="padding: 8px; border: 1px solid #ccc; text-align: center; width: 15%; color: #2563eb;">${isEx ? "C" : ""}</td>
+            <td style="padding: 8px; border: 1px solid #ccc; text-align: center; width: 15%; color: #059669;">${isEx ? "C" : ""}</td>
           </tr>
           <tr><td style="padding: 6px; border: 1px solid #ccc; text-align: center; font-weight: bold; background: #fafafa;">A</td><td colspan="2" style="padding: 6px 8px; border: 1px solid #ccc;">${isEx ? "2" : ""}</td></tr>
           <tr><td style="padding: 6px; border: 1px solid #ccc; text-align: center; font-weight: bold; background: #fafafa;">B</td><td colspan="2" style="padding: 6px 8px; border: 1px solid #ccc;">${isEx ? "3" : ""}</td></tr>
@@ -575,7 +620,7 @@
         `;
       }
 
-      let sourceHTML = header + "<h2 style='color:#1e3a8a;'>Template Form Soal CBT</h2><table border='1' style='border-collapse: collapse; width:100%; font-family:Arial; font-size:13px;'><thead style='background:#2563eb; color:#fff;'><tr><th>No / Opsi</th><th>Pertanyaan / Pilihan Jawaban</th><th>Kunci</th></tr></thead><tbody>" + tableRows + "</tbody></table>" + footer;
+      let sourceHTML = header + "<h2 style='color:#065f46;'>Template Form Soal CBT</h2><table border='1' style='border-collapse: collapse; width:100%; font-family:Arial; font-size:13px;'><thead style='background:#059669; color:#fff;'><tr><th>No / Opsi</th><th>Pertanyaan / Pilihan Jawaban</th><th>Kunci</th></tr></thead><tbody>" + tableRows + "</tbody></table>" + footer;
       let blob = new Blob(['\ufeff', sourceHTML], { type: 'application/msword' });
       let url = URL.createObjectURL(blob);
       let downloadLink = document.createElement("a");
@@ -656,8 +701,8 @@
 
     function setRole(role) {
       document.getElementById('login-role').value = role;
-      document.getElementById('btn-Siswa').className = role === 'SISWA' ? 'w-1/2 py-2.5 bg-blue-600 text-white rounded-lg font-bold text-xs sm:text-sm shadow-sm transition' : 'w-1/2 py-2.5 text-gray-600 rounded-lg font-bold text-xs sm:text-sm transition';
-      document.getElementById('btn-Admin').className = role === 'ADMIN' ? 'w-1/2 py-2.5 bg-blue-600 text-white rounded-lg font-bold text-xs sm:text-sm shadow-sm transition' : 'w-1/2 py-2.5 text-gray-600 rounded-lg font-bold text-xs sm:text-sm transition';
+      document.getElementById('btn-Siswa').className = role === 'SISWA' ? 'w-1/2 py-2.5 bg-emerald-600 text-white rounded-lg font-bold text-xs sm:text-sm shadow-sm transition' : 'w-1/2 py-2.5 text-gray-600 rounded-lg font-bold text-xs sm:text-sm transition';
+      document.getElementById('btn-Admin').className = role === 'ADMIN' ? 'w-1/2 py-2.5 bg-emerald-600 text-white rounded-lg font-bold text-xs sm:text-sm shadow-sm transition' : 'w-1/2 py-2.5 text-gray-600 rounded-lg font-bold text-xs sm:text-sm transition';
     }
 
     function showView(id) {
@@ -747,8 +792,8 @@
     function switchAdminTab(tabId, btn) {
       document.querySelectorAll('.admin-tab-content').forEach(el => el.classList.add('hidden'));
       document.getElementById(tabId).classList.remove('hidden');
-      document.querySelectorAll('.tab-btn').forEach(el => { el.classList.remove('text-blue-600', 'border-blue-600'); el.classList.add('border-transparent', 'text-gray-500'); });
-      btn.classList.add('text-blue-600', 'border-blue-600');
+      document.querySelectorAll('.tab-btn').forEach(el => { el.classList.remove('text-emerald-600', 'border-emerald-600'); el.classList.add('border-transparent', 'text-gray-500'); });
+      btn.classList.add('text-emerald-600', 'border-emerald-600');
       if(tabId === 'tab-pengaturan') loadTabelSiswa();
       if(tabId === 'tab-ujian') loadDaftarUjianAdmin();
       if(tabId === 'tab-soal') populateSoalDropdown();
@@ -771,7 +816,7 @@
       });
       kelas.forEach((k, i) => {
         listK.innerHTML += `<li class="flex justify-between py-2 text-sm"><span>${k}</span><button onclick="hapusItem('kelas', ${i})" class="text-rose-500 font-bold px-2">Hapus</button></li>`;
-        contKelas.innerHTML += `<label class="flex space-x-1.5"><input type="checkbox" class="cb-kelas rounded text-blue-600" value="${k}"> <span>${k}</span></label>`;
+        contKelas.innerHTML += `<label class="flex space-x-1.5"><input type="checkbox" class="cb-kelas rounded text-emerald-600" value="${k}"> <span>${k}</span></label>`;
         document.getElementById('manual-kelas').innerHTML += `<option value="${k}">${k}</option>`;
       });
     }
@@ -817,6 +862,38 @@
       loadTabelSiswa();
     }
 
+    // EDIT DATA SISWA
+    async function editSiswaSatu(idx) {
+      let siswaList = await DB.get('siswa');
+      let target = siswaList[idx];
+      if(!target) return;
+
+      let namaBaru = prompt("Edit Nama Siswa:", target.nama);
+      if(namaBaru === null) return;
+      let kelasBaru = prompt("Edit Kelas Siswa:", target.kelas);
+      if(kelasBaru === null) return;
+      let userBaru = prompt("Edit Username Siswa:", target.user);
+      if(userBaru === null) return;
+      let passBaru = prompt("Edit Password Siswa:", target.pass);
+      if(passBaru === null) return;
+
+      if(!namaBaru.trim() || !kelasBaru.trim() || !userBaru.trim() || !passBaru.trim()) {
+        return alert("Data siswa tidak boleh ada yang kosong!");
+      }
+
+      uiLoading(true, "Memperbarui Data Siswa...");
+      siswaList[idx] = {
+        nama: namaBaru.trim(),
+        kelas: kelasBaru.trim(),
+        user: userBaru.trim(),
+        pass: passBaru.trim()
+      };
+      await DB.set('siswa', siswaList);
+      uiLoading(false);
+      alert("Data siswa berhasil diperbarui!");
+      loadTabelSiswa();
+    }
+
     async function hapusSiswaSatu(idx) {
       if(!confirm("Hapus data siswa ini?")) return;
       uiLoading(true, "Menghapus Siswa...");
@@ -827,12 +904,51 @@
       loadTabelSiswa();
     }
 
+    // HAPUS SEMUA SISWA
+    async function hapusSemuaSiswa() {
+      let siswaList = await DB.get('siswa');
+      if(siswaList.length === 0) return alert("Daftar siswa sudah kosong.");
+      if(!confirm(`Apakah Anda YAKIN ingin menghapus SELURUH (${siswaList.length}) data siswa?`)) return;
+      
+      uiLoading(true, "Menghapus Seluruh Data Siswa...");
+      await DB.set('siswa', []);
+      uiLoading(false);
+      alert("Seluruh data siswa berhasil dihapus!");
+      loadTabelSiswa();
+    }
+
+    // FITUR FILTER PENCARIAN SISWA
+    function filterTabelSiswa() {
+      let query = document.getElementById('cari-nama-siswa').value.toLowerCase();
+      let rows = document.querySelectorAll('#tabel-kelola-siswa tbody tr');
+      rows.forEach(row => {
+        let namaCell = row.cells[0] ? row.cells[0].innerText.toLowerCase() : '';
+        if(namaCell.includes(query)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
     async function loadTabelSiswa() {
       let siswaList = await DB.get('siswa'); 
       let tbody = document.querySelector('#tabel-kelola-siswa tbody'); tbody.innerHTML = '';
+      let searchInput = document.getElementById('cari-nama-siswa');
+      if(searchInput) searchInput.value = '';
+
       if(siswaList.length === 0) return tbody.innerHTML = '<tr><td colspan="5" class="p-3 text-center text-gray-500">Belum ada siswa.</td></tr>';
       siswaList.forEach((s, idx) => {
-        tbody.innerHTML += `<tr><td class="p-2 border">${s.nama}</td><td class="p-2 border">${s.kelas}</td><td class="p-2 border">${s.user}</td><td class="p-2 border">${s.pass}</td><td class="p-2 border text-center"><button onclick="hapusSiswaSatu(${idx})" class="bg-rose-600 text-white text-xs px-2.5 py-1 rounded font-bold">Hapus</button></td></tr>`;
+        tbody.innerHTML += `<tr>
+          <td class="p-2 border font-medium">${s.nama}</td>
+          <td class="p-2 border">${s.kelas}</td>
+          <td class="p-2 border font-mono">${s.user}</td>
+          <td class="p-2 border font-mono">${s.pass}</td>
+          <td class="p-2 border text-center space-x-1">
+            <button onclick="editSiswaSatu(${idx})" class="bg-amber-500 hover:bg-amber-600 text-white text-xs px-2.5 py-1 rounded font-bold transition">Edit</button>
+            <button onclick="hapusSiswaSatu(${idx})" class="bg-rose-600 hover:bg-rose-700 text-white text-xs px-2.5 py-1 rounded font-bold transition">Hapus</button>
+          </td>
+        </tr>`;
       });
     }
 
@@ -990,7 +1106,7 @@
           <td class="p-2 border-r text-xs">${Array.isArray(u.kelas) ? u.kelas.join(', ') : u.kelas}</td>
           <td class="p-2 border-r text-center font-semibold text-xs">${u.durasi} mnt</td>
           <td class="p-2 border-r text-center font-bold text-xs ${u.acak === 'YA' ? 'text-emerald-600' : 'text-gray-500'}">${u.acak}</td>
-          <td class="p-2 border-r text-center font-bold text-blue-700">${allSoal.filter(s => s.idTes === u.idTes).length}</td>
+          <td class="p-2 border-r text-center font-bold text-emerald-700">${allSoal.filter(s => s.idTes === u.idTes).length}</td>
           <td class="p-2 text-center"><button onclick="hapusUjianTerbuat('${u.idTes}')" class="bg-rose-600 text-white text-xs px-2.5 py-1 rounded">Hapus</button></td>
         </tr>`;
       });
@@ -1021,7 +1137,7 @@
       if(listSoal.length === 0) return container.innerHTML = '<p class="text-xs text-gray-400 italic">Tidak ada soal pada ujian ini.</p>';
       listSoal.forEach(s => {
         let optionsList = ['a','b','c','d','e'].map(o => s[o] ? `<div class="flex items-start space-x-1.5 mt-1"><b>${o.toUpperCase()}.</b> <div class="flex-1">${formatTextWithImages(s[o])}</div></div>` : '').join('');
-        container.innerHTML += `<div class="border rounded-xl p-3 bg-white shadow-sm space-y-2 text-xs"><div class="flex justify-between font-bold text-blue-900 border-b pb-1"><span>Soal No. ${s.no}</span><span class="text-emerald-700">Kunci: ${s.kunci}</span></div><div>${formatTextWithImages(s.teks)}</div><div class="pl-2 border-l-2 border-gray-200 mt-2">${optionsList}</div></div>`;
+        container.innerHTML += `<div class="border rounded-xl p-3 bg-white shadow-sm space-y-2 text-xs"><div class="flex justify-between font-bold text-emerald-900 border-b pb-1"><span>Soal No. ${s.no}</span><span class="text-emerald-700">Kunci: ${s.kunci}</span></div><div>${formatTextWithImages(s.teks)}</div><div class="pl-2 border-l-2 border-gray-200 mt-2">${optionsList}</div></div>`;
       });
     }
 
@@ -1066,7 +1182,7 @@
            if(s.status === 'SELESAI') btn = `<button disabled class="bg-gray-400 text-white px-4 py-3 rounded-xl font-bold w-full text-sm">SELESAI (Nilai: ${s.nilai})</button>`;
            if(s.status.includes('CURANG')) btn = `<button disabled class="bg-rose-700 text-white px-4 py-3 rounded-xl font-bold w-full text-sm">TERKUNCI (PELANGGARAN)</button>`;
         }
-        cont.innerHTML += `<div class="bg-white border rounded-2xl p-4 shadow-sm"><h4 class="font-bold text-base text-blue-700 mb-1">${t.judul}</h4><p class="text-xs text-gray-500 mb-4">${t.mapel} &bull; ${t.durasi} Menit</p>${btn}</div>`;
+        cont.innerHTML += `<div class="bg-white border rounded-2xl p-4 shadow-sm"><h4 class="font-bold text-base text-emerald-700 mb-1">${t.judul}</h4><p class="text-xs text-gray-500 mb-4">${t.mapel} &bull; ${t.durasi} Menit</p>${btn}</div>`;
       });
     }
 
@@ -1107,7 +1223,7 @@
       let opsiHtml = ['a', 'b', 'c', 'd', 'e'].map(o => {
         if(!s[o]) return ''; let isSel = jawabanSiswa[s.no] === o.toUpperCase();
         let formattedOption = formatTextWithImages(s[o]);
-        return `<div onclick="simpanJwb('${s.no}','${o.toUpperCase()}')" class="flex items-start space-x-3 p-3 rounded-xl border ${isSel ? 'border-blue-600 bg-blue-50' : 'bg-white'} cursor-pointer"><div class="w-6 h-6 rounded-full border flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 ${isSel ? 'bg-blue-600 text-white' : 'bg-gray-100'}">${o.toUpperCase()}</div><div class="text-sm flex-1 leading-relaxed">${formattedOption}</div></div>`;
+        return `<div onclick="simpanJwb('${s.no}','${o.toUpperCase()}')" class="flex items-start space-x-3 p-3 rounded-xl border ${isSel ? 'border-emerald-600 bg-emerald-50' : 'bg-white'} cursor-pointer"><div class="w-6 h-6 rounded-full border flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 ${isSel ? 'bg-emerald-600 text-white' : 'bg-gray-100'}">${o.toUpperCase()}</div><div class="text-sm flex-1 leading-relaxed">${formattedOption}</div></div>`;
       }).join('');
       let formattedTeks = formatTextWithImages(s.teks);
       area.innerHTML = `<div class="bg-white p-4 rounded-2xl shadow-sm border mb-4"><div class="font-bold text-sm mb-3">Soal No. ${currentIndex + 1}</div><div class="text-sm leading-relaxed mb-4">${formattedTeks}</div><div class="space-y-2">${opsiHtml}</div></div>`;
